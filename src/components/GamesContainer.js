@@ -1,9 +1,11 @@
 import React from "react"
+import GameCard from "./GameCard"
 
-function GamesContainer() {
+function GamesContainer({games}) {
     return (
         <div className="games-container">
-            <h1>GamesContainer</h1>
+            <h1>Games</h1>
+            {games.map(game => <GameCard key={game.id} game={game}/>)}
         </div>
     )
 }
