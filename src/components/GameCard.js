@@ -1,5 +1,5 @@
 import React from "react";
-// import {NavLink} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 
 function GameCard({game}) {
     return (
@@ -7,11 +7,11 @@ function GameCard({game}) {
             <hr/>
             Title: <strong>{game.title}</strong>
             <br/>
-            Price: <em>${game.price}.99</em>
+            Price: <em>${game.price}</em>
             <br/>
             Platform: <strong>{game.platform}</strong> 
             <hr/>
-            {/* <NavLink to="/reviews/${}:id"><button>See reviews</button></NavLink> */}
+            <NavLink to="/reviews/all"><button>See reviews</button></NavLink>
         </div>
     )
 }
