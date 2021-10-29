@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom"
 function Navbar() {
     return (
         <nav className="nav-bar">
-            <NavLink to="/"> HOME</NavLink> | <NavLink to="/games">GAMES</NavLink> | <NavLink to="/reviews">REVIEWS</NavLink>
+            <NavLink to="/"> ☞ HOME</NavLink> | <NavLink to="/games">👾GAMES👾</NavLink> | <NavLink to="/reviews">REVIEWS 📝</NavLink>
         </nav>
     )
 }

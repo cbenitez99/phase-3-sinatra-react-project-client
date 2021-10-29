@@ -1,10 +1,9 @@
 import React from "react"
 
-function GamesContainer({games}) {
+function GamesContainer() {
     return (
         <div className="games-container">
             <h1>GamesContainer</h1>
-            <p>{games}</p>
         </div>
     )
 }

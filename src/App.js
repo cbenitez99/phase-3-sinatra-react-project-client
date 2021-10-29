@@ -11,11 +11,11 @@ function App() {
   const [games, setGames] = useState([])
 
   useEffect(()=> {
-    fetch('http://localhost:9292/games')
+    fetch("http://localhost:9292/games")
     .then(response => response.json())
     .then(data => {
-      setGames(JSON.stringify(data))
-      // console.log('Success:', data)
+      
+      console.log('Success:', data)
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -28,7 +28,7 @@ function App() {
         <Navbar/>
         <Switch>
           <Route exact path="/"> <Home/> </Route>
-          <Route exact path="/games"> <GamesContainer games={games}/> </Route>
+          <Route exact path="/games"> <GamesContainer /> </Route>
           <Route exact path="/reviews"> <ReviewsContainer/> </Route>
         </Switch>
       </Router>

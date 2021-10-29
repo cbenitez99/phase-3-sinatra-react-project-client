@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.home-page {
+  text-align: center;
+}
+ .nav-bar {
+   text-align: center;
+   font-size: xx-large;
+   color: rgba(0, 0, 0, 0.815);
+ }
+
+ .reviews-container {
+   text-align: center;
+ }
+
+ .games-container {
+   text-align: center;
+ }
