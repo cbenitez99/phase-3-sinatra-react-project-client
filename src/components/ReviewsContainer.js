@@ -1,9 +1,11 @@
 import React from "react";
+import GameReviewForm from "./GameReviewForm";
 
 function ReviewsContainer() {
     return (
         <div className="reviews-container">
-            <h1>Here are your reviews!</h1>
+            <h1>Post Your Reviews Here:</h1>
+            <GameReviewForm/>
         </div>
     )
 }
