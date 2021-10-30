@@ -22,6 +22,7 @@ function GameReviewForm({handlePost}){
     };
 
     function handleChange(event){
+        // event.target.preventDefault()
         setFormData({...formData, [event.target.id] : event.target.value});
     };
 

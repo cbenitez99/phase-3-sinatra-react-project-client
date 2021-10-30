@@ -11,7 +11,7 @@ function App() {
   const [games, setGames] = useState([])
 
   useEffect(()=> {
-    fetch(`http://localhost:9292/games/review`)
+    fetch(`http://localhost:9292/games`)
     .then(response => response.json())
     .then(gamesData => {
       debugger;
