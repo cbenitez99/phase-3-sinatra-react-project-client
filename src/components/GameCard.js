@@ -1,7 +1,6 @@
 import React from "react";
-import {NavLink} from "react-router-dom"
 
-function GameCard({game}) {
+function GameCard({game, handleDelete}) {
     return (
         <div>
             <hr/>
@@ -11,7 +10,7 @@ function GameCard({game}) {
             <br/>
             Platform: <strong>{game.platform}</strong> 
             <hr/>
-            <NavLink to="/reviews/all"><button>See reviews</button></NavLink>
+            <button onClick={()=>handleDelete(game.id)}>Remove game</button>
         </div>
     )
 }
