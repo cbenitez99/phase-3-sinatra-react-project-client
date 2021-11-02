@@ -3,14 +3,25 @@ import React, {useState} from "react";
 function GameReviewForm({handlePost}){
     const [formData, setFormData] = useState({
         title: "",
-        price: 0,
+        price: "",
         platform: "",
-        // user_name: "",
-        // content: ""
     });
 
+    // const [reviews, setReviews] = useState([])
+
+    // useEffect(()=> {
+    //     fetch(`http://localhost:9292/reviews`)
+    //     .then(response => response.json())
+    //     .then(reviewData => {
+    //       setReviews([...reviewData])
+    //     })
+    //     .catch((error) => {
+    //       console.error('Error:', error);
+    //     })
+    //   }, [])
+
     function handleSubmit(){
-        const URL = `http://localhost:9292/games/review`
+        const URL = `http://localhost:9292/games`
         const options = {
           method: "POST",
           headers: {'Content-Type':'application/json'},
@@ -18,21 +29,20 @@ function GameReviewForm({handlePost}){
         }
         fetch(URL, options)
         .then(res => res.json())
-        .then(data => handlePost(...data,[formData]))
+        .then(data => {handlePost(...data,[formData])})
     };
 
     function handleChange(event){
-        // event.target.preventDefault()
         setFormData({...formData, [event.target.id] : event.target.value});
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            <input id="title" type="text" placeholder="Enter Game Title Here" onChange={handleChange} value={FormData.title}/>
-            <input id="platform" type="text" placeholder="Enter Platform Here" onChange={handleChange} value={FormData.platform}/>
-            <input id="price" type="number" min="0" placeholder="Enter Game Price Here" onChange={handleChange} value={FormData.price}/>
-            <input id="user_name" type="text" placeholder="Enter Your Name" onChange={handleChange} value={FormData.user_name}/>
-            <input id="content" type="text" placeholder="Write Review..." onChange={handleChange} value={FormData.content}/>
+            <input id="title" type="text" placeholder="Enter Game Title Here" onChange={handleChange} value={formData.title}/>
+            <input id="platform" type="text" placeholder="Enter Platform Here" onChange={handleChange} value={formData.platform}/>
+            <input id="price" type="number" step="0.1" min="0" placeholder="Enter Game Price Here" onChange={handleChange} value={formData.price}/>
+            {/* <input id="user_name" type="text" placeholder="Enter Your Name" onChange={handleChange} value={FormData.user_name}/> */}
+            {/* <input id="content" type="text" placeholder="Write Review..." onChange={handleChange} value={FormData.content}/> */}
             <button id="button" type="submit">Add Review</button>
         </form>
     )

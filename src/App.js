@@ -14,7 +14,6 @@ function App() {
     fetch(`http://localhost:9292/games`)
     .then(response => response.json())
     .then(gamesData => {
-      debugger;
       setGames([...gamesData])
     })
     .catch((error) => {
@@ -28,14 +27,12 @@ function App() {
 
   function handleDelete(id) {
     const removedGames = games.filter(game => game.id !== id)
-    
+    console.log(removedGames)
     setGames(removedGames)
-
-    const options = {
+    fetch(`http://localhost:9292/games/${id}`, {
       method: "DELETE",
-      headers: {'Content-Type':'application/json'}
-    }
-    fetch(`http://localhost:9292/games/${id}`, options)
+      headers: {"Content-Type":"application/json"}
+    })
   }
 
 
