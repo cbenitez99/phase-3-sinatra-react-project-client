@@ -1,27 +1,16 @@
 import React, {useState} from "react";
 
-function GameReviewForm({handlePost}){
+function ReviewForm({handlePost}){
     const [formData, setFormData] = useState({
+        user_name: "",
+        content: "",
         title: "",
         price: "",
-        platform: "",
+        platform: ""
     });
-
-    // const [reviews, setReviews] = useState([])
-
-    // useEffect(()=> {
-    //     fetch(`http://localhost:9292/reviews`)
-    //     .then(response => response.json())
-    //     .then(reviewData => {
-    //       setReviews([...reviewData])
-    //     })
-    //     .catch((error) => {
-    //       console.error('Error:', error);
-    //     })
-    //   }, [])
-
+    
     function handleSubmit(){
-        const URL = `http://localhost:9292/games`
+        const URL = `http://localhost:9292/reviews`
         const options = {
           method: "POST",
           headers: {'Content-Type':'application/json'},
@@ -41,11 +30,11 @@ function GameReviewForm({handlePost}){
             <input id="title" type="text" placeholder="Enter Game Title Here" onChange={handleChange} value={formData.title}/>
             <input id="platform" type="text" placeholder="Enter Platform Here" onChange={handleChange} value={formData.platform}/>
             <input id="price" type="number" step="0.1" min="0" placeholder="Enter Game Price Here" onChange={handleChange} value={formData.price}/>
-            {/* <input id="user_name" type="text" placeholder="Enter Your Name" onChange={handleChange} value={FormData.user_name}/> */}
-            {/* <input id="content" type="text" placeholder="Write Review..." onChange={handleChange} value={FormData.content}/> */}
+            <input id="user_name" type="text" placeholder="Enter Your Name" onChange={handleChange} value={formData.user_name}/>
+            <input id="content" type="text" placeholder="Write Review..." onChange={handleChange} value={formData.content}/>
             <button id="button" type="submit">Add Review</button>
         </form>
     )
 };
 
-export default GameReviewForm;
+export default ReviewForm;
