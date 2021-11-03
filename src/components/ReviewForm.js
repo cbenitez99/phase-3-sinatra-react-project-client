@@ -27,11 +27,11 @@ function ReviewForm({handlePost}){
 
     return (
         <form onSubmit={handleSubmit}>
-            <input id="title" type="text" placeholder="Enter Game Title Here" onChange={handleChange} value={formData.title}/>
-            <input id="platform" type="text" placeholder="Enter Platform Here" onChange={handleChange} value={formData.platform}/>
-            <input id="price" type="number" step="0.1" min="0" placeholder="Enter Game Price Here" onChange={handleChange} value={formData.price}/>
-            <input id="user_name" type="text" placeholder="Enter Your Name" onChange={handleChange} value={formData.user_name}/>
-            <input id="content" type="text" placeholder="Write Review..." onChange={handleChange} value={formData.content}/>
+            <input id="title" type="text" placeholder="Enter Game Title Here" onChange={handleChange} value={formData["title"]}/>
+            <input id="platform" type="text" placeholder="Enter Platform Here" onChange={handleChange} value={formData["platform"]}/>
+            <input id="price" type="number" step="0.1" min="0" placeholder="Enter Game Price Here" onChange={handleChange} value={formData["price"]}/>
+            <input id="user_name" type="text" placeholder="Enter Your Name" onChange={handleChange} value={formData["user_name"]}/>
+            <input id="content" type="text" placeholder="Write Review..." onChange={handleChange} value={formData["content"]}/>
             <button id="button" type="submit">Add Review</button>
         </form>
     )
