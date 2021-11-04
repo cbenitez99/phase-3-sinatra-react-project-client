@@ -3,8 +3,8 @@ import ReviewCard from "./ReviewCard"
 
 function ReviewsContainer({ reviews, handleDelete}) {
     return (
-        <div>
-            <h1>Reviews</h1>
+        <div className="reviews-container">
+            <h1 id="review-list-title">GAMES</h1>
             {reviews.map(review => 
             <ReviewCard key={review.id}
             review={review}

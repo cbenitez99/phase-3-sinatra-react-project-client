@@ -2,19 +2,17 @@ import React from "react";
 
 function ReviewCard({review, platform, price, title, content, user_name, handleDelete}) {
     return (
-        <div>
-            <hr/>
-            <h5>Name: <strong>{user_name}</strong></h5>
-            Game: {title} 
-            <br/>
-            Price: $ {price} 
-            <br/>
-            Platform: {platform}
-            <br></br>
-            Review: <p>{content}</p>
-            <button onClick={(e) => handleDelete(review.id)}>Remove Review</button>
-            <hr/>
+    <div>
+        <div id="review-card">
+            <span className="card-title">Game: <strong>{title}</strong> </span>
+            <p>Price: <strong>${price}</strong></p>
+            <p>Platform: <strong>{platform}</strong></p>
+            <p>Review: <em>"{content}"<br/></em>- {user_name}</p>
         </div>
+        <div className="card-action" id="button-rev-card">
+            <button className="waves-effect waves-light btn-large" onClick={(e) => handleDelete(review.id)}>Remove Review</button>
+        </div>
+    </div>
     )
 }
 

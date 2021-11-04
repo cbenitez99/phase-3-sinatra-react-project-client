@@ -30,7 +30,7 @@ function ReviewForm({handlePost}){
             <input id="price" type="number" step="0.1" min="0" placeholder="Enter Game Price Here" onChange={handleChange} value={formData.price}/>
             <input id="user_name" type="text" placeholder="Enter Your Name" onChange={handleChange} value={formData.user_name}/>
             <textarea id="content" type="text" placeholder="Write Review..." onChange={handleChange} value={formData.content}/>
-            <button id="button" type="submit">Add Review</button>
+            <button className="btn waves-effect waves-light" type="submit">Submit Review </button> 
         </form>
     )
 };

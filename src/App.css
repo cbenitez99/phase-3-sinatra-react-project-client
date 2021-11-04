@@ -1,55 +1,65 @@
-.App {
+ .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .home-page {
   text-align: center;
-}
+} 
  .nav-bar {
    text-align: center;
    font-size: xx-large;
-   color: rgba(0, 0, 0, 0.815);
+   color: black;
  }
 
- .reviews-container {
-   text-align: center;
- }
+.reviews-container {
+  background-color: #EE6D73; 
+  margin-top: -42px;
+}
 
- .games-container {
-   text-align: center;
- }
+#review-card {
+  text-align: center;
+  border: solid 10px black;
+  margin: 45px;
+  padding: 10px;
+  background-color: aliceblue;
+}
+#button-rev-card{
+  text-align: center;
+}
+
+textarea {
+  resize: vertical;
+  font-family: impact, fantasy;
+  font-size: large;
+}
+
+input{
+   margin-top: 25px; 
+   height: 2em; 
+   width: 15em; 
+  margin: 100px;
+  background-color: #EE6D73;
+  color: white;
+  font-family: impact, fantasy;
+  font-size: large;
+}
+
+
+form {
+  padding: 60px;
+  background-color: #EE6D73;
+  margin-top: 6em;
+  width: 20em;
+  position: relative;
+  left: 50%;
+  margin-left: -12em;
+}
+
+::placeholder {
+  color: black;
+}
+
+#review-list-title {
+ padding-left: 9.57em;
+}
+
