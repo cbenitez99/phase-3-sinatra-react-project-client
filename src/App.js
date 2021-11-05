@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Home from "./components/Home"
 import ReviewsContainer from './components/ReviewsContainer';
 import ReviewForm from './components/ReviewForm';
-// import ReviewExtraInfo from './components/ReviewExtraInfo';
 
 function App() {
 
@@ -34,6 +33,19 @@ function App() {
       headers: {"Content-Type":"application/json"}
     })
   }
+
+  // function handlePatch(id) {
+  //   const patchedReview = reviews.filter(review => review.id !== id)
+  //   setReviews(patchedReview)
+  //   fetch(`http://localhost:9292/reviews/${id}`, {
+  //     method: "PATCH",
+  //     headers: { 
+  //       "Accept":"application/json",
+  //       "Content-Type": "application/json"   
+  //     },
+  //     body: JSON.stringify({content: reviews.content})
+  //   })
+  // }
   
   return (
     <div>
@@ -41,7 +53,7 @@ function App() {
         <Navbar/>
         <Switch>
           <Route exact path="/"> <Home/> </Route>
-          <Route exact path="/reviews"> <ReviewsContainer reviews={reviews} handleDelete={handleDelete}/> </Route>
+          <Route exact path="/reviews"> <ReviewsContainer reviews={reviews} handleDelete={handleDelete} /> </Route>
           <Route exact path="/reviews/new"> <ReviewForm handlePost={handlePost}/></Route>
         </Switch>
       </Router>
