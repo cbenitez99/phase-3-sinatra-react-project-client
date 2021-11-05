@@ -5,7 +5,7 @@ function ReviewCard({review, platform, price, title, content, user_name, handleD
     <div>
         <div id="review-card">
             <span className="card-title">Game: <strong>{title}</strong> </span>
-            <p>Price: <strong>${price}</strong></p>
+            <p>Price: <strong>{"$" + price}</strong></p>
             <p>Platform: <strong>{platform}</strong></p>
             <p>Review: <em>"{content}"<br/></em>- {user_name}</p>
         </div>
