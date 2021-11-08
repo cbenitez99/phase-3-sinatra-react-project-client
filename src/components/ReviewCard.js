@@ -1,17 +1,28 @@
-import React /*{ useState }*/ from "react";
-// import ReviewEdit from "./ReviewEdit";
+import React from "react";
 
-function ReviewCard({review, platform, price, title, content, user_name, handleDelete, handlePatch}) {
+function ReviewCard({review, handleDelete}) {
+    function handleClick() {
+        fetch(`https://localhost:9292/reviews/${review.id}`, {
+            method: "PATCH",
+            headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+          },      
+          body: JSON.stringify({likes: review.likes + 1})
+        })
+        .then (resp => resp.json())
+        .then (data => console.log(data))
+    }
     return (
     <div>
         <div id="review-card">
-            <span className="card-title">Game: <strong>{title}</strong> </span>
-            <p>Price: <strong>{"$" + price}</strong></p>
-            <p>Platform: <strong>{platform}</strong></p>
-            <p>Review: <em>"{content}"<br/></em>- {user_name}</p>
+            <span className="card-title">Game: <strong>{review.game.title}</strong> </span>
+            <p>Price: <strong>{"$" + review.game.price}</strong></p>
+            <p>Platform: <strong>{review.game.platform}</strong></p>
+            <p>Review: <em>"{review.content}"<br/></em>- {review.user_name}</p>
             <div className="card-action" id="button-rev-card">
             <button className="waves-effect waves-dark btn-small" onClick={(e) => handleDelete(review.id)}>Remove Review</button> {""}
-            <button className="waves-effect waves-light btn-small" onClick={(e) => handlePatch(review.id)}>Edit Review</button>
+            <button className="waves-effect waves-light btn-small" onClick={() => handleClick(review)}>Like Review: {review.likes}</button>
             </div>
         </div>
     </div>

@@ -21,8 +21,7 @@ function ReviewForm({handlePost}){
 
     function handleChange(event){
         setFormData({...formData, [event.target.id] : event.target.value});
-    };
-
+    };  
     return (
         <form onSubmit={handleSubmit}>
             <input id="title" type="text" placeholder="Enter Game Title Here" onChange={handleChange} value={formData.title}/>
