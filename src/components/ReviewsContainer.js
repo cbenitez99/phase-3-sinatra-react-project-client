@@ -1,7 +1,7 @@
 import React from "react"
 import ReviewCard from "./ReviewCard"
 
-function ReviewsContainer({ reviews, handleDelete }) {
+function ReviewsContainer({ reviews, handleDelete, handlePatch }) {
     return (
         <div className="reviews-container">
             <h1 id="review-list-title">GAMES</h1>
@@ -13,7 +13,8 @@ function ReviewsContainer({ reviews, handleDelete }) {
             title={review.game.title}
             content={review.content}
             user_name={review.user_name} 
-            handleDelete={handleDelete}/>
+            handleDelete={handleDelete}
+            handlePatch={handlePatch}/>
             )}
         </div>
     )

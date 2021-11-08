@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React /*{ useState }*/ from "react";
 // import ReviewEdit from "./ReviewEdit";
 
-function ReviewCard({review, platform, price, title, content, user_name, handleDelete}) {
+function ReviewCard({review, platform, price, title, content, user_name, handleDelete, handlePatch}) {
     return (
     <div>
         <div id="review-card">
@@ -11,7 +11,7 @@ function ReviewCard({review, platform, price, title, content, user_name, handleD
             <p>Review: <em>"{content}"<br/></em>- {user_name}</p>
             <div className="card-action" id="button-rev-card">
             <button className="waves-effect waves-dark btn-small" onClick={(e) => handleDelete(review.id)}>Remove Review</button> {""}
-            {/* <button className="waves-effect waves-light btn-small" onClick={(e) => handleClick(review.id)}>Edit Review</button> */}
+            <button className="waves-effect waves-light btn-small" onClick={(e) => handlePatch(review.id)}>Edit Review</button>
             </div>
         </div>
     </div>

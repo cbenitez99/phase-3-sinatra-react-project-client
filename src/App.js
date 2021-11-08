@@ -34,18 +34,18 @@ function App() {
     })
   }
 
-  // function handlePatch(id) {
-  //   const patchedReview = reviews.filter(review => review.id !== id)
-  //   setReviews(patchedReview)
-  //   fetch(`http://localhost:9292/reviews/${id}`, {
-  //     method: "PATCH",
-  //     headers: { 
-  //       "Accept":"application/json",
-  //       "Content-Type": "application/json"   
-  //     },
-  //     body: JSON.stringify({content: reviews.content})
-  //   })
-  // }
+  function handlePatch(id) {
+    fetch(`https://localhost:9292/reviews/${id}`, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      method: "PATCH",        
+      body: JSON.stringify({content: reviews.content})
+    })
+    .then (resp => resp.json())
+    .then (data => console.log(data))
+  }
   
   return (
     <div>
@@ -53,7 +53,7 @@ function App() {
         <Navbar/>
         <Switch>
           <Route exact path="/"> <Home/> </Route>
-          <Route exact path="/reviews"> <ReviewsContainer reviews={reviews} handleDelete={handleDelete} /> </Route>
+          <Route exact path="/reviews"> <ReviewsContainer reviews={reviews} handleDelete={handleDelete} handlePatch={handlePatch}/> </Route>
           <Route exact path="/reviews/new"> <ReviewForm handlePost={handlePost}/></Route>
         </Switch>
       </Router>
