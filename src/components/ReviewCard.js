@@ -1,18 +1,14 @@
 import React from "react";
 
 function ReviewCard({review, handleDelete}) {
-    function handleClick() {
-        fetch(`https://localhost:9292/reviews/${review.id}`, {
+    
+    function handlePatch(id) {
+        fetch(`http://localhost:9292/reviews/${id}`, {
             method: "PATCH",
-            headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-          },      
-          body: JSON.stringify({likes: review.likes + 1})
+            headers: {"Content-Type":"application/json"},      
+            body: JSON.stringify({likes: review.likes + 1 })
         })
-        .then (resp => resp.json())
-        .then (data => console.log(data))
-    }
+      }
     return (
     <div>
         <div id="review-card">
@@ -22,7 +18,7 @@ function ReviewCard({review, handleDelete}) {
             <p>Review: <em>"{review.content}"<br/></em>- {review.user_name}</p>
             <div className="card-action" id="button-rev-card">
             <button className="waves-effect waves-dark btn-small" onClick={(e) => handleDelete(review.id)}>Remove Review</button> {""}
-            <button className="waves-effect waves-light btn-small" onClick={() => handleClick(review)}>Like Review: {review.likes}</button>
+            <button className="waves-effect waves-light btn-small" onClick={() => handlePatch(review.id)}>Like Review: {review.likes}</button>
             </div>
         </div>
     </div>
