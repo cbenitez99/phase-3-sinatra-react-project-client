@@ -9,6 +9,6 @@ function ReviewsContainer({ reviews, handleDelete }) {
             {mappedReviews}
         </div>
     )
-}
+};
 
 export default ReviewsContainer;

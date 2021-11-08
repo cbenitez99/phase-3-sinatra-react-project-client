@@ -7,6 +7,6 @@ function Navbar() {
             <NavLink to="/"> ☞ HOME</NavLink> | <NavLink to="/reviews">Your Reviews</NavLink> | <NavLink to="/reviews/new">Post New Review 📝</NavLink>
         </nav>
     )
-}
+};
 
 export default Navbar;

@@ -23,7 +23,7 @@ function App() {
 
   function handlePost(newPost){
     setReviews(newPost)
-  }
+  };
 
   function handleDelete(id) {
     const removedReview = reviews.filter(review => review.id !== id)
@@ -32,7 +32,7 @@ function App() {
       method: "DELETE",
       headers: {"Content-Type":"application/json"}
     })
-  }
+  };
     
   return (
     <div>
@@ -46,5 +46,6 @@ function App() {
       </Router>
     </div>
   );
-}
+};
+
 export default App
