@@ -40,7 +40,7 @@ function App() {
         <Navbar/>
         <Switch>
           <Route exact path="/"> <Home/> </Route>
-          <Route exact path="/reviews"> <ReviewsContainer reviews={reviews} handleDelete={handleDelete} /> </Route>
+          <Route exact path="/reviews"> <ReviewsContainer reviews={reviews} handleDelete={handleDelete}/> </Route>
           <Route exact path="/reviews/new"> <ReviewForm handlePost={handlePost} /> </Route>
         </Switch>
       </Router>
