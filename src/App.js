@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Home from "./components/Home"
 import ReviewsContainer from './components/ReviewsContainer';
 import ReviewForm from './components/ReviewForm';
+import GamesContainer from './components/GamesContainer'
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
           <Route exact path="/"> <Home/> </Route>
           <Route exact path="/reviews"> <ReviewsContainer reviews={reviews} handleDelete={handleDelete}/> </Route>
           <Route exact path="/reviews/new"> <ReviewForm handlePost={handlePost} /> </Route>
+          <Route exact path="/games"> <GamesContainer/> </Route>
         </Switch>
       </Router>
     </div>
