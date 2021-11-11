@@ -47,6 +47,7 @@ input{
 
 
 form {
+  border: solid black;
   padding: 60px;
   background-color: #EE6D73;
   margin-top: 6em;
@@ -82,7 +83,7 @@ padding: 0;
 
 .game-card-title {
   background-color: black;
-  border: solid black;
+  border: solid red
 }
 
 @keyframes bgcolor {
@@ -95,11 +96,11 @@ padding: 0;
   }
 
   50% {
-      background-color: #EE6D73;
+      background-color: black;
   }
 
   75% {
-      background-color: red
+      background-color: black;
   }
 
   100% {
@@ -109,7 +110,8 @@ padding: 0;
 }
 
 body {
-  -webkit-animation: bgcolor 5s infinite;
+  background-color: #EE6D73;
+  -webkit-animation: bgcolor 10s infinite;
   animation: bgcolor 5s infinite;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;

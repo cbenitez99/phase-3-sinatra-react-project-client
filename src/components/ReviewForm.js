@@ -8,8 +8,9 @@ function ReviewForm({handlePost}){
         price: "",
         platform: ""
     });
-
+    
     function handleSubmit(){
+        
         fetch(`http://localhost:9292/reviews`, {
             method: "POST",
             headers: {"Content-Type" : "application/json"},
@@ -20,6 +21,10 @@ function ReviewForm({handlePost}){
     };
 
     function handleChange(event){
+        console.log(event.target.value)
+        if(event.target.value === ""){
+            setFormData({title: "Unknown Game"})
+        }
         setFormData({...formData, [event.target.id] : event.target.value});
     };  
     
