@@ -12,8 +12,9 @@ function GamesContainer({ handleDelete}) {
 
     const mappedgames = games.map(game => <GameCard key={game.id} game={game} handleDelete={handleDelete}/>)
     return (
-        <div className="games-container">
-            <h1 id="game-list-title">Games</h1>
+        <div id="game-card-container">
+            <em><strong><h1 style={{color: "black"}} className="game-list-title">Created Games</h1></strong></em>
+        
             {mappedgames}
         </div>
     )

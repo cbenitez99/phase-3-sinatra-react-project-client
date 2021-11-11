@@ -53,7 +53,7 @@ form {
   width: 20em;
   position: relative;
   left: 50%;
-  margin-left: -12em;
+  margin-left: -11em;
 }
 
 ::placeholder {
@@ -65,4 +65,54 @@ text-align: center;
 margin: 0;
 padding: 0;
 }
+
+.game-list-title {
+  text-align: center;
+}
+
+#game-card:hover {
+  text-align: center;
+  background: fixed black;
+  -webkit-transition: background-color 1.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out;
+  -o-transition: background-color 1.5s ease-out;
+  transition: background-color 1.5s ease-out;
+  cursor: pointer;
+}
+
+.game-card-title {
+  background-color: black;
+  border: solid black;
+}
+
+@keyframes bgcolor {
+  0% {
+      background-color: #EE6D73;
+  }
+
+  25% {
+      background-color: #EE6D73;
+  }
+
+  50% {
+      background-color: #EE6D73;
+  }
+
+  75% {
+      background-color: red
+  }
+
+  100% {
+      background-color: #EE6D73;
+  }
+
+}
+
+body {
+  -webkit-animation: bgcolor 5s infinite;
+  animation: bgcolor 5s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
 
