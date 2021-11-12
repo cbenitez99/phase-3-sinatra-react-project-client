@@ -5,11 +5,17 @@
 .home-page {
   text-align: center;
 } 
- .nav-bar {
-   text-align: center;
-   font-size: xx-large;
-   color: black;
- }
+
+.home-img{
+  background-repeat: no-repeat;
+  background-image: url("https://images.unsplash.com/photo-1604846887565-640d2f52d564?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2FtaW5nJTIwY29uc29sZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+}
+
+.nav-bar {
+  text-align: center;
+  font-size: xx-large;
+  color: black;
+}
 
 .reviews-container {
   background-color: #EE6D73; 
@@ -32,29 +38,29 @@ textarea {
   resize: vertical;
   font-family: impact, fantasy;
   font-size: large;
+  height: 300px;
 }
 
 input{
-   margin-top: 25px; 
-   height: 2em; 
-   width: 15em; 
+  margin-top: 25px; 
+  height: 2em; 
+  width: 15em; 
   margin: 100px;
-  background-color: #EE6D73;
   color: white;
   font-family: impact, fantasy;
   font-size: large;
 }
 
-
 form {
-  border: solid black;
-  padding: 60px;
+  border: solid 5px black;
+  padding: 15px;
   background-color: #EE6D73;
   margin-top: 6em;
-  width: 20em;
+  width: 400px;
+  height: 600px;
   position: relative;
   left: 50%;
-  margin-left: -11em;
+  margin-left: -13em;
 }
 
 ::placeholder {
@@ -62,9 +68,9 @@ form {
 }
 
 #review-list-title {
-text-align: center;
-margin: 0;
-padding: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .game-list-title {
@@ -72,6 +78,8 @@ padding: 0;
 }
 
 #game-card:hover {
+  padding: -14px;
+  margin-bottom: -14px;
   text-align: center;
   background: fixed black;
   -webkit-transition: background-color 1.5s ease-out;
@@ -82,39 +90,42 @@ padding: 0;
 }
 
 .game-card-title {
+  background-color: white;
+  border: solid 1px white;
+}
+
+.game-card-title{
   background-color: black;
-  border: solid red
-}
-
-@keyframes bgcolor {
-  0% {
-      background-color: #EE6D73;
-  }
-
-  25% {
-      background-color: #EE6D73;
-  }
-
-  50% {
-      background-color: black;
-  }
-
-  75% {
-      background-color: black;
-  }
-
-  100% {
-      background-color: #EE6D73;
-  }
-
-}
-
-body {
-  background-color: #EE6D73;
   -webkit-animation: bgcolor 10s infinite;
   animation: bgcolor 5s infinite;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
 
+body {
+  background-color: #EE6D73;
+}
+
+/* @keyframes bgcolor {
+  0% {
+    background-color: rgba(38, 92, 163, 0.616);
+  }
+
+  25% {
+  background-color: rgba(102, 38, 204, 0.75);
+  }
+
+  50% {
+    background-color: rgb(155, 70, 189);
+  }
+
+  75% {
+    background-color: rgb(189, 79, 161);
+  }
+
+  100% {
+    background-color: rgb(235, 96, 119);
+  }
+
+} */
 
