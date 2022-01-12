@@ -33,7 +33,7 @@ function ReviewCard({review, handleDelete}) {
             <p>Review: <em>"{review.content}"<br/></em>- {review.user_name}</p>
             <div className="card-action" id="button-rev-card">
             <button className="waves-effect waves-dark btn-small" onClick={() => handleDelete(review.id)}>Remove Review</button> {""}
-            <button className="waves-effect waves-light btn-small" onClick={() => handlePatch(review.id)}>Likes: {likes}</button> {""}
+            <button className="waves-effect waves-light btn-small" onClick={() => handlePatch(review.id)}>Like: {likes}</button> {""}
             <button className="waves-effect waves-dark btn-small" onClick={() => handleDislikePatch(review.id)}>Dislike</button> 
             </div>
         </div>
